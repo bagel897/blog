@@ -13,8 +13,7 @@ def synchronize(path: Path, stopped: Event):
 
 if which("deno") is None:
     run(executable="paru", args=[" -s", "deno", " --sudoloop" " --noconfirm"])
-path = Path.home() / ".deno/bin/pagic"
-if not path.exists():
+if which("pagic"):
     run(
         [
             "deno",
@@ -32,7 +31,7 @@ event = Event()
 watcher = Process(target=synchronize, args=(Path("./blag"), event))
 watcher.start()
 try:
-    run([path.as_posix(), "build", "--watch", "--serve"])
+    run(["pagic", "build", "--watch", "--serve"])
 except KeyboardInterrupt:
     event.set()
     watcher.join()
