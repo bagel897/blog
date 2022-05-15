@@ -1,0 +1,8 @@
+version: "3"
+services:
+  blog:
+    container_name: blog 
+    image: . 
+    restart: always
+    ports:
+      - '8000:8000'

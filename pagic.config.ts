@@ -15,6 +15,6 @@ export default {
     { text: "Tags", link: "/tags/index.html", icon: "czs-tag-l" },
     { text: "About", link: "/about/index.html", icon: "czs-about-l" },
     { text: "Archives", link: "/archives/index.html", icon: "czs-box-l" },
-    { text: "Friends", link: "/links/index.html", icon: "czs-link-l" },
+    { text: "Friends", link: "/friends/index.html", icon: "czs-link-l" },
   ],
 };
