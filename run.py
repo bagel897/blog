@@ -13,7 +13,7 @@ def synchronize(path: Path, stopped: Event):
 
 if which("deno") is None:
     run(executable="paru", args=[" -s", "deno", " --sudoloop" " --noconfirm"])
-if which("pagic"):
+if not which("pagic"):
     run(
         [
             "deno",
